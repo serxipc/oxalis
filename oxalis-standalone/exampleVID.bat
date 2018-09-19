@@ -15,7 +15,7 @@ REM Sends a sample invoice to your own local access point
 java -jar target/oxalis-standalone.jar -f src/test/resources/BII04_T10_PEPPOL-v2.0_invoice.xml^
       -r 9908:810418052^
       -s 9946:ESPAP^
-      -u http://localhost:8080/oxalis/as2^
+      -u http://localhost:8080/oxalis-inbound/as2^
       -m as2^
       -i APP_1000000380
 @echo off

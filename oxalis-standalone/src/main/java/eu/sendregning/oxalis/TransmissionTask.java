@@ -60,6 +60,8 @@ public class TransmissionTask implements Callable<TransmissionResult> {
         this.params = params;
         this.xmlPayloadFile = xmlPayloadFile;
 
+        log.debug(xmlPayloadFile + ": " + params.toString());
+        
         this.tracer = params.getOxalisOutboundComponent().getInjector().getInstance(Tracer.class);
     }
 

@@ -39,7 +39,8 @@ public class LookupServiceTest {
     @Test
     public void simple() throws Exception {
         Endpoint endpoint = lookupService.lookup(Header.newInstance()
-                .receiver(ParticipantIdentifier.of("9908:810418052"))
+        		//.receiver(ParticipantIdentifier.of("9908:810418052"))
+                .receiver(ParticipantIdentifier.of("9920:ESP0801900B"))
                 .documentType(DocumentTypeIdentifier.of(
                         "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice" +
                                 "##urn:www.cenbii.eu:transaction:biitrns010:ver2.0" +

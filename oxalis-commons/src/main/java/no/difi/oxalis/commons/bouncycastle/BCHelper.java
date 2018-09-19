@@ -59,9 +59,20 @@ public class BCHelper {
      */
     public static MessageDigest getMessageDigest(String algorithm) throws NoSuchAlgorithmException {
         try {
+			return mdInstance(algorithm);
+		} catch (Exception e) {
+			// posible fallada provider i classloader tomcat
+			Security.removeProvider(BouncyCastleProvider.PROVIDER_NAME);
+			registerProvider();
+			return mdInstance(algorithm);
+		}
+    }
+
+	private static MessageDigest mdInstance(String algorithm) throws NoSuchAlgorithmException {
+		try {
             return MessageDigest.getInstance(algorithm, BouncyCastleProvider.PROVIDER_NAME);
         } catch (NoSuchProviderException e) {
             throw new NoSuchAlgorithmException(e.getMessage(), e);
         }
-    }
+	}
 }

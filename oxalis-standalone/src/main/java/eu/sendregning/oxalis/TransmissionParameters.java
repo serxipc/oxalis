@@ -118,4 +118,12 @@ class TransmissionParameters {
     public void setEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
     }
+
+	@Override
+	public String toString() {
+		return "TransmissionParameters [receiver=" + receiver + ", sender=" + sender + ", docType=" + docType
+				+ ", processIdentifier=" + processIdentifier + ", endpoint=" + endpoint + ", evidencePath="
+				+ evidencePath + ", oxalisOutboundComponent=" + oxalisOutboundComponent + ", useFactory=" + useFactory
+				+ "]";
+	}        
 }

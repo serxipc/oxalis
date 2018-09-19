@@ -64,7 +64,8 @@ public class BCHelperTest {
         Assert.assertNotNull(BCHelper.getMessageDigest("SHA-1"));
     }
 
-    @Test(expectedExceptions = NoSuchAlgorithmException.class)
+    //Ara torna a registrar automaticament si no el troba
+    @Test//(expectedExceptions = NoSuchAlgorithmException.class)
     public void triggerExceptionWhenProviderIsNotFound() throws Exception {
         Security.removeProvider(BouncyCastleProvider.PROVIDER_NAME);
 

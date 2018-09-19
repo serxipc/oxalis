@@ -10,13 +10,13 @@
 TRACE=""
 
 # The default is to send the sample document to our own access point running on our own machine.
-URL="https://localhost:8080/oxalis/as2"
+URL="http://localhost:8080/oxalis-inbound/as2"
 
 # The URL and the METHOD must correspond
 METHOD="as2"
 
 # The AS2 destination system identifier has to be specified when using AS2 (X.509 common name of receiver)
-AS2SID="APP_1000000XXX"
+AS2SID="APP_1000000380"
 
 FILE="./src/test/resources/BII04_T10_PEPPOL-v2.0_invoice.xml"
 DOC_TYPE_OPTION=""
